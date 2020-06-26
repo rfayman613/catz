@@ -1,48 +1,109 @@
+    // var userName = prompt("What's your name?");
+	// var confirmCats = confirm("Do you like cats?");
 
-// Write some Pseudo code
-// As a user types in the input #q_cat_name store the value to catName and then display it on the page #catName
+  var yourName = '';
+  //fetch the elements we created in html, save to a variable for future use
+  var inputName = document.querySelector('#q_your_name')
+  var nameElement = document.querySelector('#yourName')
+  var checkbox1 = document.querySelector('#checkbox1')
+  var catInfo = document.querySelector('#catInfo')
+  var checkbox2 = document.querySelector('#checkbox2')
+  var petType = document.querySelector('#petType')
+  var yourCat = document.querySelector('#yourCat')
+  var checkbox3 = document.querySelector('#checkbox3')
+  
+  var catName = "Meeses";
+var catType = "Tuxedo Cat";
+  var catAge = 5;
+  var petIsCat = true;
+  
+  //on keyboard key press up EVENT
+  inputName.onkeydown = (eventOutput) => {
+      console.log(eventOutput)
+          //remember to looks up ASCII table for number associated to letters
+          //if the key press is a letter A-z/a-z
+          if(eventOutput.keyCode >= 65 && eventOutput.keyCode <=90){
+              //add the letter pressed to our variable
+              yourName += eventOutput.key
+              //update the html element to display the value every time we add new value to the variable
+              nameElement.innerHTML = yourName
+          }
+  };
 
-// craete a storage holder for the cats name
-var catName = '';
-
-// fetch the elements we created in the html, save to a variable for future use
-var inputElm = document.querySelector('#q_cat_name')
-var catElm = document.querySelector('#catName')
-var checkbox = document.querySelector('#checkbox')
-var answer = document.querySelector('#answer')
-
-// on keyboard key press up EVENT
-inputElm.onkeyup = (eventOutput) => {
-  // console.log(eventOutput)
-
-    // every letter has a number associated
-    // look up ascii table
-
-    // if the key pressed is a letter A-Z / a-z
-      if(eventOutput.keyCode >= 65 && eventOutput.keyCode <=90) {
-        // add the letter pressed to our variable
-        catName += eventOutput.key 
-        // update the html element to display the value every time we add new value to the variable
-        catElm.innerHTML = catName
+  //on click of the checkbox
+  checkbox1.onclick = function(eventOutput){
+      //console.log(eventOutput)
+      //.checked returns a value of either true or false
+      //if checkbox is checked (has true value)
+      if(checkbox1.checked) {
+          //display a message with cat's name, type, age
+          catInfo.innerHTML = `My cat ${catName}, a ${catType}, is ${catAge} years old!`
       }
-};
+      else {
+          catInfo.innerHTML = `You don't get my cat's information :(`
+      }
+  };
 
-// on click of the checkbox
-checkbox.onclick = function(eventOutput){
-  // console.log(eventOutput)
+  //on click of checkbox if your pet is a cat
+  checkbox2.onclick = function(eventOutput){
+      //.checked returns a value of either true or false for checkbox
+      //if checkbox checked (it has a true value)
+      if(checkbox2.checked) {
+          //if true display "my pet is a cat" otherwise "pet is not a cat"
+          petType.innerHTML = `My pet is a cat!`
+      }
+      else{
+          petType.innerHTML=`My pet is not a cat.`
+      }
+  };
 
-  //.checked returns a value of either true or false
-  // if the checkbox is checked (has value true)
-  if(checkbox.checked) {
-      // display a message if the user HAS NOT provided their cats name
-      if(catName === '') answer.innerHTML = `I am glad you like cats`
-      // display a message if the user HAS provided their cats name
-      if(catName !== '') answer.innerHTML = `I am so happy for ${catName}`
-  } else {
-    // if the user does not check the box 
-    // display a message to the user about their choice
-      answer.innerHTML = 'Too bad you don\'t like cats :('
-  }
-};
+  checkbox3.onclick = function(eventOutput) {
+          //console.log(eventOutput)
+          //remember to looks up ASCII table for number associated to letters
+          //if the key press is a letter A-z/a-z
+          if(checkbox3.checked) {
+              yourCat.innerHTML = `Your cat is older than ${catName}`
+              document.querySelector(".catimage").innerHTML=""
+              var image=document.createElement("IMG")
+              image.setAttribute("src", "https://images.unsplash.com/photo-1512270154623-1c2f9502f65d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); 
+              document.querySelector(".catimage").appendChild(image);  
+          }
+          else {
+              yourCat.innerHTML = `Your cat is younger than ${catName}`
+              document.querySelector(".catimage").innerHTML=""
+              var image=document.createElement("IMG")
+              image.setAttribute("src", "https://images.unsplash.com/photo-1472491235688-bdc81a63246e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+              document.querySelector(".catimage").appendChild(image);     
+          }
+  };
+  
 
-// after any update we always want to redisplay the value in the html to provide immediate feedback to the user
+
+  
+  
+
+// if (petAge !== 7) {
+// alert("My pet is not 7 years old");
+// }
+
+// if (petAge === 5) {
+// alert("My pet is 5 years old");
+// }
+// else if (petAge < 5) {
+// alert("My pet is less than 5 years old");
+// }
+// else if (petAge > 5) {
+// alert("My pet is older than 5 years old");
+// }
+
+// // logs the value in your chrome de
+// veloper console
+// console.log("Welcome to our page " + userName);
+
+// var catAge = prompt("How old is your cat?");
+
+// // Won't work as expected
+// alert(catAge + 2);
+
+// // Works as expected
+// alert(parseInt(catAge) + 2);
