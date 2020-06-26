@@ -1,8 +1,25 @@
-/*Header*/
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Georgia, “Times New Roman”, Times, serif;
+    font-size: 18px;
+    line-height: 125%;
+    background: #F5F5F5
+  }  
+  
+  /*Header*/
 header {
     background-color: rgb(157, 228, 99);
     border-bottom: 1px solid rgb(173, 170, 170);
-    width: 35%;
+    animation-name: colorbox;
+    animation-duration: 4s;
+}
+
+@keyframes colorbox {
+    from {background-color: rgb(240, 236, 47);}
+    to {background-color: rgb(157, 228, 99);}
 }
 
 header a {
@@ -21,8 +38,7 @@ h1 {
 
 /* Universal Styles */
 .container {
-    width: 35%;
-    margin: 25px;
+    margin: 0 auto;
     background-color: #4aaaa5;
     color: blanchedalmond;
     font-size: 25px;
@@ -30,7 +46,7 @@ h1 {
 .blue-background {
     border: none;
     background-color: #4aaaa5;
-    width: 35%;
+    min-height: 280px;
 }
 
 .content-wrapper {
@@ -54,14 +70,8 @@ section .container {
     padding-top: 2%;
 }
 
-body {
-    padding: 0px;
-    margin: 0px;
-    font-family: Georgia, “Times New Roman”, Times, serif;
-    font-size: 18px;
-    line-height: 125%;
-    background: #F5F5F5
-  }  
+
+
 
 /* Wrapper for content*/
 .content {
@@ -118,9 +128,17 @@ p {
     width: 220px;
     float: right;
     text-align: center;
-    display: block;
 }
 
+.center {
+    margin: 3% auto;
+    width: 35%;
+}
+
+.padding {
+    padding: 10px;
+    margin-top: 20px;
+}
 /* Footer */
 footer {
     background-color: #666666;
@@ -137,6 +155,14 @@ footer {
 
 
 /*Main Background*/
+/* put in background-size: contain */
+/* background-size: 100vw */
 body {
     background-image: url("https://images.homedepot-static.com/productImages/a9eac22d-23b7-44bd-9b3d-bbb8831b9e55/svn/brewster-wallpaper-hn002616sam-64_max.jpg");
 }
+
+@media only screen and (max-width: 700px) {
+    .center {
+        width: 100%;
+    }
+  }
