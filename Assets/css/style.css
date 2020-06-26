@@ -1,0 +1,142 @@
+/*Header*/
+header {
+    background-color: rgb(157, 228, 99);
+    border-bottom: 1px solid rgb(173, 170, 170);
+    width: 35%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 25px;
+    color: rgb(196, 16, 16);
+    font-size: 30px;
+    font-weight: bold;
+    width: 35%;
+}
+
+
+
+/* Universal Styles */
+.container {
+    width: 35%;
+    margin: 25px;
+    background-color: #4aaaa5;
+    color: blanchedalmond;
+    font-size: 25px;
+}
+.blue-background {
+    border: none;
+    background-color: #4aaaa5;
+    width: 35%;
+}
+
+.content-wrapper {
+    margin: 10px;
+}
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.round {
+    border-radius: 100%;
+}
+
+.rounded {
+    border-radius: 2%;
+}
+
+section .container {
+    padding-top: 2%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Georgia, “Times New Roman”, Times, serif;
+    font-size: 18px;
+    line-height: 125%;
+    background: #F5F5F5
+  }  
+
+/* Wrapper for content*/
+.content {
+    width: 660px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    float: left;
+}
+
+h2 { 
+    font-size: 40px;
+    color: #4aaaa5;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 3px solid rgb(173, 170, 170);
+}
+
+h3 {
+    font-size: 24px;
+    color:#4aaaa5;
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 20px;
+    padding-bottom: 20px
+  }
+
+#myinfo {
+    color: #333;
+    /* padding: 25px;
+    margin: 20px; */
+    display: inline-block;
+    width: 65%;
+}
+
+p {
+    padding: 0%;
+    margin: 0%;
+    font-family: Georgia, “Times New Roman”, Times, serif;
+    font-size: 20px;
+    background: rgb(167, 168, 236);
+    color: rgb(129, 22, 67);
+  }
+
+/*Soc Media */
+.mysocmedia {
+    /* padding: 5px; */
+    color: teal;
+    font-size: 20px;
+    font-weight: bold;
+    background: #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 5px;
+    border: 2px solid #DDDDDD;
+    width: 220px;
+    float: right;
+    text-align: center;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #666666;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border-top: 5px solid rgb(34, 142, 150);
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
+/*Main Background*/
+body {
+    background-image: url("https://images.homedepot-static.com/productImages/a9eac22d-23b7-44bd-9b3d-bbb8831b9e55/svn/brewster-wallpaper-hn002616sam-64_max.jpg");
+}
